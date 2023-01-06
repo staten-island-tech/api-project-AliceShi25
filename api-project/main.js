@@ -5,7 +5,7 @@ async function getData(URL) {
   try {
     const response = await fetch(URL);
     const data = await response.json();
-    document.getElementById("body").textContent = data.card.value;
+    document.getElementById("body").textContent = data.card.name;
     console.log(data.card.name);
   } catch (error) {}
 }
