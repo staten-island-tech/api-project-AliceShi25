@@ -1,4 +1,4 @@
-const tarot = "https://tarot-api.onrender.com/api/v1/cards/wakn";
+const tarot = "https://tarot-api.onrender.com/api/v1/cards/ar01";
 
 async function getData(tarot) {
   try {
