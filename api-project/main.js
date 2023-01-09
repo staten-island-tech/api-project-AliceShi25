@@ -1,12 +1,11 @@
-const URL = "https://tarot-api.onrender.com/";
 const tarot = "https://tarot-api.onrender.com/api/v1/cards/wakn";
 
-async function getData(URL) {
+async function getData(tarot) {
   try {
-    const response = await fetch(URL);
+    const response = await fetch(tarot);
     const data = await response.json();
-    document.getElementById("body").textContent = data.card.name;
-    console.log(data.card.name);
+    document.getElementById("body").textContent = data.card.desc;
+    console.log(data.card.desc);
   } catch (error) {}
 }
 
