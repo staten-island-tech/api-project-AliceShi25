@@ -1,4 +1,6 @@
-const card = [
+const tarot = "https://tarot-api.onrender.com/api/v1/cards";
+
+const image = [
   {
     name: "The Magician",
     image: "https://gfx.tarot.com/images/site/decks/rider/mid_size/1.jpg",
@@ -312,6 +314,7 @@ const card = [
     image: "https://gfx.tarot.com/images/site/decks/rider/mid_size/59.jpg",
   },
 ];
-card.forEach((card) => {
-  console.log(card.name);
-});
+
+export { image };
+
+export { tarot };

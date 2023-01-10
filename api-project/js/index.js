@@ -1,5 +1,5 @@
-const tarotM = "tarot-api.onrender.com/";
-const tarot = "https://tarot-api.onrender.com/api/v1/cards";
+import { image } from "./tarot";
+import { tarot } from "./tarot";
 
 async function getData(tarot) {
   try {
@@ -10,11 +10,10 @@ async function getData(tarot) {
       const data = await response.json();
       document.getElementById("body").textContent = data.cards;
       console.log(data);
+      return data;
     }
   } catch (error) {
     console.log(error);
   }
 }
 getData(tarot);
-
-console.log(tarot);
