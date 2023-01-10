@@ -1,4 +1,4 @@
-const tarot = "https://tarot-api.onrender.com/api/v1/cards";
+const tarot = "https://tarot-api.onrender.com/api/v1/cards/random?n=10";
 
 const image = [
   {

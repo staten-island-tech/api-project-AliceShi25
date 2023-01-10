@@ -1,0 +1,18 @@
+
+#parent{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.tarots{
+    flex: 0 0 23.5%;
+    width: 32vw;
+    margin: 25px auto;
+    background-color: pink;
+    align-content: center;
+    border: solid white;
+}
