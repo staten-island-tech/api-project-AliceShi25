@@ -8,11 +8,18 @@
     text-align: center;
 }
 
-.tarots{
+.card-back{
     flex: 0 0 23.5%;
     width: 32vw;
     margin: 25px auto;
     background-color: pink;
     align-content: center;
-    border: solid white;
+    border: solid black;
+}
+
+.card-front{
+    flex: 0 0 23.5%;
+    width: 32vw;
+    margin: 25px auto;
+    align-content: center;
 }

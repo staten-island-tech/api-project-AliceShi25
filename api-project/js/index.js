@@ -4,7 +4,6 @@ import "../styles/style.css";
 
 const DOMselectors = {
   parent: document.getElementById("parent"),
-  parent2: document.getElementById("parent2"),
 };
 
 async function getData(tarot) {
@@ -15,7 +14,7 @@ async function getData(tarot) {
     data.cards.forEach((card) => {
       DOMselectors.parent.insertAdjacentHTML(
         "beforeend",
-        `<div class="tarots">
+        `<div class="card-back">
             <h2>${card.name}</h2>
             <h3>${card.meaning_up}</h3>
             <p class="info">${card.desc}</p>
@@ -27,3 +26,14 @@ async function getData(tarot) {
   }
 }
 getData(tarot);
+
+function createImage(pic) {
+  document.getElementById("parent").insertAdjacentHTML(
+    "beforeend",
+    `<div class="card-front">
+        <img class="image" src="${pic.image}">
+        </div>`
+  );
+}
+
+image.forEach(createImage);
