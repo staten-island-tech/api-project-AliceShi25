@@ -8,7 +8,7 @@
     text-align: center;
 }
 
-.card-back{
+.pohee{
     flex: 0 0 23.5%;
     width: 32vw;
     margin: 25px auto;
@@ -16,10 +16,15 @@
     align-content: center;
     border: solid black;
 }
-
+/* 
 .card-front{
     flex: 0 0 23.5%;
     width: 32vw;
     margin: 25px auto;
     align-content: center;
+} */
+
+.img{
+    width:15vw;
+    height: 14vw;
 }

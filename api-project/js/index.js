@@ -1,23 +1,23 @@
-import { image } from "./tarot";
-import { tarot } from "./tarot";
+// import { image } from "./tarot";
+import { ponyuh } from "./ponah";
 import "../styles/style.css";
 
 const DOMselectors = {
   parent: document.getElementById("parent"),
 };
 
-async function getData(tarot) {
+async function getData(ponyuh) {
   try {
-    const response = await fetch(tarot);
+    const response = await fetch(ponyuh);
     const data = await response.json();
     console.log(data);
-    data.cards.forEach((card) => {
+    data.data.forEach((ponee) => {
       DOMselectors.parent.insertAdjacentHTML(
         "beforeend",
-        `<div class="card-back">
-            <h2>${card.name}</h2>
-            <h3>${card.meaning_up}</h3>
-            <p class="info">${card.desc}</p>
+        `<div class="pohee">
+            <h2>${ponee.name}</h2>
+            <img class = "img" src=${ponee.image}>
+            <p class="info">${ponee.sex}</p>
           </div>`
       );
     });
@@ -25,15 +25,14 @@ async function getData(tarot) {
     console.log(error);
   }
 }
-getData(tarot);
+getData(ponyuh);
 
-function createImage(pic) {
-  document.getElementById("parent").insertAdjacentHTML(
-    "beforeend",
-    `<div class="card-front">
-        <img class="image" src="${pic.image}">
-        </div>`
-  );
-}
-
-image.forEach(createImage);
+// function createImage(pic) {
+//   document.getElementById("parent").insertAdjacentHTML(
+//     "beforeend",
+//     `<div class="card-front">
+//         <img class="image" src="${pic.image}">
+//         </div>`
+//   );
+// }
+// image.forEach(createImage);
