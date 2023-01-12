@@ -16,8 +16,10 @@ async function getData(ponyuh) {
         "beforeend",
         `<div class="pohee">
             <h2>${ponee.name}</h2>
-            <img class = "img" src=${ponee.image}>
             <p class="info">${ponee.sex}</p>
+          </div>
+          <div class="pohehe">
+            <img class = "img" src=${ponee.image}></p>
           </div>`
       );
     });

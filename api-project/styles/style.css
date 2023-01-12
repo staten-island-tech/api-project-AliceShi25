@@ -1,4 +1,9 @@
-
+*,html,body{
+    box-sizing: border-box;
+    font: 62.5%;
+    margin: 0;
+    padding: 0;
+}
 #parent{
     display: flex;
     justify-content: space-between;
@@ -10,11 +15,12 @@
 
 .pohee{
     flex: 0 0 23.5%;
-    width: 32vw;
+    width: 23.5vw;
+    height: 23.5vw;
     margin: 25px auto;
     background-color: pink;
     align-content: center;
-    border: solid black;
+    /* border: solid black; */
 }
 /* 
 .card-front{
@@ -25,6 +31,8 @@
 } */
 
 .img{
-    width:15vw;
-    height: 14vw;
+    width:23.5vw;
+    height: 23.5vw;
+    align-content: center;
+    margin: 25px auto;
 }
