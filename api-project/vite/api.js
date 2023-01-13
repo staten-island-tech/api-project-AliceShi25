@@ -1,5 +1,3 @@
-const queen = "https://taylorswiftapi.onrender.com/get-all";
-
 // const image = [
 //   {
 //     name: "The Magician",
@@ -316,5 +314,3 @@ const queen = "https://taylorswiftapi.onrender.com/get-all";
 // ];
 
 // export { image };
-
-export { queen };

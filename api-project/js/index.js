@@ -1,24 +1,26 @@
 // import { image } from "./tarot";
-import { queen } from "./api";
 import "../styles/style.css";
+
+const apiKey = "api_key=8f0696839a064ed5b45cadbe141ee377";
+const URL = "https://api.themoviedb.org/3";
+const pop_URL = URL + "/discover/movie?sort_by=popularity.desc&" + apiKey;
 
 const DOMselectors = {
   parent: document.getElementById("parent"),
 };
 
-async function getData(queen) {
+async function getData(pop_URL) {
   try {
-    const response = await fetch(queen);
+    const response = await fetch(pop_URL);
     const data = await response.json();
     console.log(data);
-    data.forEach((queen) => {
+    // showMovies(data.results);
+    data.results.forEach((pop_URL) => {
       DOMselectors.parent.insertAdjacentHTML(
         "beforeend",
-        `<div class="justT">
-        <div class = "tarot-back">
-            <h2>${queen.song}</h2>
-            <p class="info">${queen.quote}</p>
-            </div>
+        `<div class = "stuff">
+            <h2>${pop_URL.title}</h2>
+            <p class="info">${pop_URL.id}</p>
           </div>`
       );
     });
@@ -26,7 +28,12 @@ async function getData(queen) {
     console.log(error);
   }
 }
-getData(queen);
+getData(pop_URL);
+
+// function showMovies(data) {
+//   data.results.forEach((movie) => {
+//     document.querySelector(".movie")
+// }
 
 // function createImage(pic) {
 //   document.getElementById("parent").insertAdjacentHTML(
