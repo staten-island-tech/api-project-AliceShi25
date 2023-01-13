@@ -19,7 +19,7 @@ async function getData(ponyuh) {
             <p class="info">${ponee.sex}</p>
           </div>
           <div class="pohehe">
-            <img class = "img" src=${ponee.image}></p>
+            <img class = "img" src=${ponee.image}>
           </div>`
       );
     });
