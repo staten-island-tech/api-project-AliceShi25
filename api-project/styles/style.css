@@ -13,11 +13,16 @@
     text-align: center;
 }
 
+.movie{
+    flex: 0 0 23.5%;
+    width: 32vw;
+    margin: 25px auto;
+    align-content: center;
+    border-radius: 25px;
+}
 
-
-/* .img{
-    width:23.5vw;
-    height: 23.5vw;
+.img{
+    width:22vw;
     align-content: center;
     margin: 25px auto;
-} */
+}
