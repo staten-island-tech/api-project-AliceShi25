@@ -1,0 +1,32 @@
+:root{
+    /*colors*/
+    --white: #fff;
+    --black: #000;
+    --brown: #331800;
+    
+    /* theme 1 */
+    --red: #ec442c;
+    --lightRed: #eab99f;
+
+    /* theme 2 */
+    --purple: #643ce4;
+    --pink:#e99880;
+    /*text*/
+    --h1: 7.594rem;
+    --h2: 5.063rem;
+    --h3: 3.375rem;
+    --h4: 2.25rem;
+    --h5: 1.5rem;
+    }
+
+    /* theme */
+
+    .theme1{
+        --primary: var(--red);
+        --secondary: var(--lightRed);
+    }
+    
+    .theme2{
+        --primary: var(--purple);
+        --secondary: var(--pink);
+    }

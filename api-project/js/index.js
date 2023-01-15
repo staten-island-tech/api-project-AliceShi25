@@ -1,14 +1,22 @@
 // import { image } from "./tarot";
 import "../styles/style.css";
+import { DOMselectors } from "./variables";
 
 const apiKey = "api_key=8f0696839a064ed5b45cadbe141ee377";
 const URL = "https://api.themoviedb.org/3";
 const pop_URL = URL + "/discover/movie?sort_by=popularity.desc&" + apiKey;
 const img_URL = "https://image.tmdb.org/t/p/w500";
+const search_URL = URL + "/search/movie?" + apiKey;
 
-const DOMselectors = {
-  parent: document.getElementById("parent"),
-};
+DOMselectors.theme.addEventListener("click", function () {
+  if (document.body.classList.contains("theme2")) {
+    document.body.classList.add("theme1");
+    document.body.classList.remove("theme2");
+  } else {
+    document.body.classList.add("theme2");
+    document.body.classList.remove("theme1");
+  }
+});
 
 async function getData(pop_URL) {
   try {
@@ -41,6 +49,16 @@ function showMovies(data) {
     DOMselectors.parent.appendChild(create);
   });
 }
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const searching = DOMselectors.search.value;
+  if (searching) {
+    getData(search_URL + "&query=" + searching);
+  } else {
+    getData(pop_URL);
+  }
+});
 
 // function createImage(pic) {
 //   document.getElementById("parent").insertAdjacentHTML(
