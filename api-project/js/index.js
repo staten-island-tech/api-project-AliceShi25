@@ -18,13 +18,13 @@ DOMselectors.theme.addEventListener("click", function () {
   }
 });
 
-const create = {
+const show = {
   data: async function getData(pop_URL) {
     try {
       const response = await fetch(pop_URL);
       const data = await response.json();
       console.log(data);
-      create.movie(data.results);
+      show.movie(data.results);
     } catch (error) {
       console.log(error);
     }
@@ -54,14 +54,14 @@ const create = {
     e.preventDefault();
     const searching = DOMselectors.search.value;
     if (searching) {
-      create.data(search_URL + "&query=" + searching);
+      show.data(search_URL + "&query=" + searching);
     } else {
-      create.data(pop_URL);
+      show.data(pop_URL);
     }
   }),
 };
 
-create.data(pop_URL);
+show.data(pop_URL);
 
 // function createImage(pic) {
 //   document.getElementById("parent").insertAdjacentHTML(
