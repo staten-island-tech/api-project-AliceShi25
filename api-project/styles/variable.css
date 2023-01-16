@@ -10,7 +10,7 @@
 
     /* theme 2 */
     --purple: #643ce4;
-    --pink:#e99880;
+    --lightBlue:#728FCE;
     /*text*/
     --h1: 7.594rem;
     --h2: 5.063rem;
@@ -28,5 +28,5 @@
     
     .theme2{
         --primary: var(--purple);
-        --secondary: var(--pink);
+        --secondary: var(--lightBlue);
     }

@@ -18,25 +18,25 @@ DOMselectors.theme.addEventListener("click", function () {
   }
 });
 
-async function getData(pop_URL) {
-  try {
-    const response = await fetch(pop_URL);
-    const data = await response.json();
-    console.log(data);
-    showMovies(data.results);
-  } catch (error) {
-    console.log(error);
-  }
-}
-getData(pop_URL);
+const create = {
+  data: async function getData(pop_URL) {
+    try {
+      const response = await fetch(pop_URL);
+      const data = await response.json();
+      console.log(data);
+      create.movie(data.results);
+    } catch (error) {
+      console.log(error);
+    }
+  },
 
-function showMovies(data) {
-  DOMselectors.parent.innerHTML = "";
-  data.forEach((movie) => {
-    const { title, poster_path, vote_average, overview, id } = movie;
-    const create = document.createElement("div");
-    create.classList.add("movie");
-    create.innerHTML = `
+  movie: function showMovies(data) {
+    DOMselectors.parent.innerHTML = "";
+    data.forEach((movie) => {
+      const { title, poster_path, vote_average, overview, id } = movie;
+      const create = document.createElement("div");
+      create.classList.add("movie");
+      create.innerHTML = `
       <img class ="img" src="${img_URL + poster_path}" alt="img">
       <div class="movieInfo">
         <h2>${title}</h2>
@@ -46,19 +46,22 @@ function showMovies(data) {
         <h3>Description</h3>
           ${overview}
       </div>`;
-    DOMselectors.parent.appendChild(create);
-  });
-}
+      DOMselectors.parent.appendChild(create);
+    });
+  },
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const searching = DOMselectors.search.value;
-  if (searching) {
-    getData(search_URL + "&query=" + searching);
-  } else {
-    getData(pop_URL);
-  }
-});
+  search: form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const searching = DOMselectors.search.value;
+    if (searching) {
+      create.data(search_URL + "&query=" + searching);
+    } else {
+      create.data(pop_URL);
+    }
+  }),
+};
+
+create.data(pop_URL);
 
 // function createImage(pic) {
 //   document.getElementById("parent").insertAdjacentHTML(
