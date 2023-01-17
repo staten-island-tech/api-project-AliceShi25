@@ -32,22 +32,26 @@ const show = {
 
   movie: function showMovies(data) {
     DOMselectors.parent.innerHTML = "";
-    data.forEach((movie) => {
-      const { title, poster_path, vote_average, overview, id } = movie;
+    data.forEach((weewo) => {
+      const { title, poster_path, vote_average, overview } = weewo;
       const create = document.createElement("div");
       create.classList.add("movie");
       create.innerHTML = `
-      <img class ="img" src="${img_URL + poster_path}" alt="img">
+      <img class ="img" src="${img_URL + poster_path}" alt="${title}">
       <div class="movieInfo">
         <h2>${title}</h2>
-        <p>Rating: ${vote_average}</p>
+        <h4>Rating: ${vote_average}</h4>
       </div>
       <div class="movieDesc">
         <h3>Description</h3>
-          ${overview}
+          <p>${overview}</p>
       </div>`;
       DOMselectors.parent.appendChild(create);
     });
+  },
+
+  clear: function none() {
+    DOMSelectors.search.value = "";
   },
 
   search: form.addEventListener("submit", (e) => {
@@ -58,6 +62,7 @@ const show = {
     } else {
       show.data(pop_URL);
     }
+    searching.value = "";
   }),
 };
 
