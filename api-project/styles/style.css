@@ -9,12 +9,17 @@
 }
 
 .above{
-    padding:1rem;
     display:flex;
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
     background-color: var(--secondary-color);
 }
 
+.searcher{
+    text-align: right;
+}
 #parent{
     display:flex;
     flex-wrap: wrap;
@@ -37,3 +42,4 @@
 .img{
     width:100%;
 }
+

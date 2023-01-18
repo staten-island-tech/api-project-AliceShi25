@@ -50,10 +50,6 @@ const show = {
     });
   },
 
-  clear: function none() {
-    DOMSelectors.search.value = "";
-  },
-
   search: form.addEventListener("submit", (e) => {
     e.preventDefault();
     const searching = DOMselectors.search.value;
