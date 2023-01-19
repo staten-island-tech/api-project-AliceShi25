@@ -5,21 +5,28 @@
     font: 62.5%;
     margin: 0;
     padding: 0;
-    background-color: var(--secondary);
 }
 
-.above{
+body{
+    background-color: var(--primary);
+}
+
+#above{
     display:flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     text-align: center;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary);
 }
 
-.searcher{
+#searcher{
     text-align: right;
+    background-color: var(--primary);
+    margin-right: 8.6rem;
+    color: var(--textColor);
 }
+
 #parent{
     display:flex;
     flex-wrap: wrap;

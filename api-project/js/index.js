@@ -33,17 +33,20 @@ const show = {
   movie: function showMovies(data) {
     DOMselectors.parent.innerHTML = "";
     data.forEach((weewo) => {
-      const { title, poster_path, vote_average, overview } = weewo;
+      const { title, poster_path, vote_average, overview, release_date } =
+        weewo;
       const create = document.createElement("div");
       create.classList.add("movie");
       create.innerHTML = `
-      <img class ="img" src="${img_URL + poster_path}" alt="${title}">
+      <img class ="img" src="${
+        img_URL + poster_path
+      }" alt="${title}, Release Date ${release_date}">
       <div class="movieInfo">
         <h2>${title}</h2>
-        <h4>Rating: ${vote_average}</h4>
+        <h3>Rating: ${vote_average}</h3>
       </div>
       <div class="movieDesc">
-        <h3>Description</h3>
+        <h4>Description</h4>
           <p>${overview}</p>
       </div>`;
       DOMselectors.parent.appendChild(create);
