@@ -5,48 +5,26 @@
     --brown: #331800;
     
     /* theme 1 */
-    --red: #ec442c;
-    --lightRed: #eab99f;
+    --f: #AEE2FF;
+    --s: #FEDEFF;
 
     /* theme 2 */
-    --purple: #643ce4;
-    --lightBlue:#728FCE;
-    /*text*/
-    --h1: 7.594rem;
-    --h2: 5.063rem;
-    --h3: 3.375rem;
-    --h4: 2.25rem;
-    --h5: 1.5rem;
+    --first: #00005C;
+    --second:#C060A1;
     }
 
     /* theme */
 
     .theme1{
-        --primary: var(--red);
-        --secondary: var(--lightRed);
+        --primary: var(--f);
+        --secondary: var(--s);
         --textColor: var(--black);
+        --boxS: var(--black);
     }
     
     .theme2{
-        --primary: var(--purple);
-        --secondary: var(--lightBlue);
+        --primary: var(--first);
+        --secondary: var(--second);
         --textColor: var(--white);
+        --boxS: var(--white)
     }
-
-    /* text sizes */
-/* 
-    h1{
-        font-size: var(--h2);
-    }
-
-    h2{
-        font-size: var(--h3);
-    }
-
-    h3{
-        font-size: var(--h5);
-    }
-
-    h4{
-        font-size: var(--h4);
-    } */
