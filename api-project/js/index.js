@@ -61,7 +61,6 @@ const show = {
     } else {
       show.data(pop_URL);
     }
-    searching.value = "";
   }),
 };
 

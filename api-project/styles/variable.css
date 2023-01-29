@@ -7,10 +7,12 @@
     /* theme 1 */
     --f: #AEE2FF;
     --s: #FEDEFF;
+    --t: #008db8;
 
     /* theme 2 */
     --first: #00005C;
     --second:#C060A1;
+    --third: #5494da;
     }
 
     /* theme */
@@ -18,6 +20,7 @@
     .theme1{
         --primary: var(--f);
         --secondary: var(--s);
+        --tertiary: var(--t);
         --textColor: var(--black);
         --boxS: var(--black);
     }
@@ -25,6 +28,7 @@
     .theme2{
         --primary: var(--first);
         --secondary: var(--second);
+        --tertiary: var(--third);
         --textColor: var(--white);
         --boxS: var(--white)
     }

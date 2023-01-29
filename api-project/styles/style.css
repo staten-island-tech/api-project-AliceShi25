@@ -61,7 +61,7 @@
     margin: 1rem;
     border-radius: 3px;
     box-shadow: 0.2px 4px 5px var(--black);
-    background-color: var(--secondary);
+    background-color: var(--tertiary);
     position:relative;
     overflow: hidden;
     transition: all 0.3s;
@@ -72,6 +72,23 @@
     transform: scale(1.02);
     box-shadow: 0 10px 30px var(--boxS);
   }
+
+.movieDesc {
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: var(--secondary);
+    padding: 1rem;
+    max-height: 100%;
+    transform:translateY(101%);
+    transition: transform 0.4s ease-in;
+}
+
+.movie:hover .movieDesc{
+    transform:translateY(0)
+}
+
 
 .buttons{
     background-color: var(--secondary);
